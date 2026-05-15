@@ -1,0 +1,440 @@
+/* ---------------------------------------------------------------------------
+ * BlueBirds Bill Splitter · Material 3 expressive design system
+ *
+ *  Aesthetic
+ *  ─────────
+ *  Cool blue-tinted surface (#f8f9ff) as the page wash.  Crisp white cards
+ *  with hairline cool borders.  Vivid teal-blue primary (#00658d) for
+ *  navigation and primary actions, paired with a brighter cyan primary
+ *  container (#00aeef) for hero stat surfaces and call-to-action cards.
+ *  Plus Jakarta Sans is the single typeface family.
+ *
+ *  Why two libraries on one page
+ *  ─────────────────────────────
+ *  Nuxt UI is intentionally kept installed (it still drives a few legacy
+ *  components like useToast types).  All NEW UI is built with raw Tailwind
+ *  utility classes against the tokens defined below — no `U*` primitives.
+ *  The Nuxt-UI palette tokens (`--ui-*`) are kept as thin aliases so the
+ *  remaining legacy renders still match the new look.
+ *
+ *  Imports
+ *  ───────
+ *  Per the CSS spec all @import rules must precede every other rule.  The
+ *  Google-Fonts URL import sits at the very top, ahead of the Tailwind /
+ *  Nuxt UI imports, which expand into real rules during build.
+ * ------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
+
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  /* fonts ---------------------------------------------------------------- */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
+  --font-serif: var(--font-sans);
+
+  /* radii — MD3 expressive: generous, friendly. */
+  --ui-radius: 0.75rem;
+
+  /* ============ Material 3 token palette (light) ============
+     Carbon-copied from the Stitch design system so every screen the user
+     pulled lines up byte-for-byte. */
+  --md-primary:                 #00658d;
+  --md-on-primary:              #ffffff;
+  --md-primary-container:       #00aeef;
+  --md-on-primary-container:    #003e58;
+  --md-primary-fixed:           #c6e7ff;
+  --md-primary-fixed-dim:       #82cfff;
+  --md-on-primary-fixed:        #001e2d;
+  --md-on-primary-fixed-variant:#004c6b;
+
+  --md-secondary:               #4648d4;
+  --md-on-secondary:            #ffffff;
+  --md-secondary-container:     #6063ee;
+  --md-on-secondary-container:  #fffbff;
+  --md-secondary-fixed:         #e1e0ff;
+  --md-secondary-fixed-dim:     #c0c1ff;
+  --md-on-secondary-fixed:      #07006c;
+  --md-on-secondary-fixed-variant: #2f2ebe;
+
+  --md-tertiary:                #006c49;
+  --md-on-tertiary:             #ffffff;
+  --md-tertiary-container:      #10b981;
+  --md-on-tertiary-container:   #00422b;
+  --md-tertiary-fixed:          #6ffbbe;
+  --md-tertiary-fixed-dim:      #4edea3;
+
+  --md-error:                   #ba1a1a;
+  --md-on-error:                #ffffff;
+  --md-error-container:         #ffdad6;
+  --md-on-error-container:      #93000a;
+
+  --md-surface:                 #f8f9ff;
+  --md-surface-dim:             #cbdbf5;
+  --md-surface-bright:          #f8f9ff;
+  --md-surface-container-lowest:#ffffff;
+  --md-surface-container-low:   #eff4ff;
+  --md-surface-container:       #e5eeff;
+  --md-surface-container-high:  #dce9ff;
+  --md-surface-container-highest:#d3e4fe;
+  --md-surface-variant:         #d3e4fe;
+  --md-surface-tint:            #00658d;
+
+  --md-on-surface:              #0b1c30;
+  --md-on-surface-variant:      #3e4850;
+  --md-on-background:           #0b1c30;
+  --md-background:              #f8f9ff;
+
+  --md-outline:                 #6e7881;
+  --md-outline-variant:         #bdc8d1;
+
+  --md-inverse-surface:         #213145;
+  --md-inverse-on-surface:      #eaf1ff;
+  --md-inverse-primary:         #82cfff;
+
+  /* motion --------------------------------------------------------------- */
+  --ease-out-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* MD3 elevation — small, calm, and *cool* (blue-tinged shadow on a cool wash). */
+  --shadow-card:        0 1px 2px  0 rgba(0, 174, 239, 0.04),
+                        0 1px 3px  0 rgba(11, 28, 48, 0.06);
+  --shadow-card-lifted: 0 4px 12px -2px rgba(0, 174, 239, 0.08),
+                        0 2px 6px  -2px rgba(11, 28, 48, 0.08);
+  --shadow-card-hero:   0 10px 30px -6px rgba(0, 101, 141, 0.30),
+                        0 4px 12px  -2px rgba(0, 174, 239, 0.18);
+}
+
+/* ============ LIGHT — MD3 palette mapped to Nuxt-UI tokens ============ */
+:root {
+  /* Nuxt UI token aliases (so legacy components blend in). */
+  --ui-bg:          var(--md-surface);
+  --ui-bg-muted:    var(--md-surface-container-low);
+  --ui-bg-elevated: var(--md-surface-container-lowest);
+  --ui-bg-accented: var(--md-surface-container);
+  --ui-bg-inverted: var(--md-inverse-surface);
+
+  --ui-border:          var(--md-outline-variant);
+  --ui-border-muted:    var(--md-surface-container);
+  --ui-border-accented: var(--md-outline);
+  --ui-border-inverted: var(--md-inverse-surface);
+
+  --ui-text-dimmed:      var(--md-outline);
+  --ui-text-muted:       var(--md-on-surface-variant);
+  --ui-text-toned:       var(--md-on-surface);
+  --ui-text:             var(--md-on-surface);
+  --ui-text-highlighted: var(--md-on-background);
+  --ui-text-inverted:    var(--md-inverse-on-surface);
+
+  --ui-primary: var(--md-primary);
+  --ui-success: var(--md-tertiary);
+  --ui-error:   var(--md-error);
+  --ui-warning: #ad7a00;
+  --ui-info:    var(--md-primary-container);
+
+  --ui-color-primary-50:  #f0f8ff;
+  --ui-color-primary-100: #c6e7ff;
+  --ui-color-primary-200: #82cfff;
+  --ui-color-primary-300: #4ebadf;
+  --ui-color-primary-400: #00aeef;
+  --ui-color-primary-500: #0094ce;
+  --ui-color-primary-600: #00658d;
+  --ui-color-primary-700: #004c6b;
+  --ui-color-primary-800: #003e58;
+  --ui-color-primary-900: #001e2d;
+  --ui-color-primary-950: #001220;
+}
+
+/* ============ DARK — same hue family, dimmed surfaces ============ */
+.dark {
+  --md-surface:                 #0b1620;
+  --md-surface-dim:             #060c14;
+  --md-surface-bright:          #1a2632;
+  --md-surface-container-lowest:#070e16;
+  --md-surface-container-low:   #101a26;
+  --md-surface-container:       #15212e;
+  --md-surface-container-high:  #1c2937;
+  --md-surface-container-highest:#243140;
+  --md-on-surface:              #eaf1ff;
+  --md-on-surface-variant:      #c0cad6;
+  --md-on-background:           #eaf1ff;
+  --md-background:              #0b1620;
+  --md-outline:                 #8898a8;
+  --md-outline-variant:         #2a3a4d;
+  --md-primary:                 #82cfff;
+  --md-on-primary:              #003e58;
+  --md-primary-container:       #004c6b;
+  --md-on-primary-container:    #c6e7ff;
+  --md-error:                   #ffb4ab;
+  --md-error-container:         #93000a;
+  --md-on-error-container:      #ffdad6;
+  --md-tertiary:                #4edea3;
+  --md-tertiary-container:      #00422b;
+
+  --ui-bg:          var(--md-surface);
+  --ui-bg-muted:    var(--md-surface-container-low);
+  --ui-bg-elevated: var(--md-surface-container);
+  --ui-bg-accented: var(--md-surface-container-high);
+  --ui-bg-inverted: #eaf1ff;
+
+  --ui-border:          var(--md-outline-variant);
+  --ui-border-muted:    var(--md-surface-container);
+  --ui-border-accented: var(--md-outline);
+  --ui-border-inverted: #eaf1ff;
+
+  --ui-text-dimmed:      #6e7e90;
+  --ui-text-muted:       var(--md-on-surface-variant);
+  --ui-text-toned:       var(--md-on-surface);
+  --ui-text:             var(--md-on-surface);
+  --ui-text-highlighted: #ffffff;
+  --ui-text-inverted:    var(--md-on-background);
+
+  --ui-primary: var(--md-primary);
+  --ui-success: var(--md-tertiary);
+  --ui-error:   var(--md-error);
+  --ui-warning: #ffce4a;
+  --ui-info:    var(--md-primary-container);
+
+  --ui-color-primary-50:  #001220;
+  --ui-color-primary-100: #001e2d;
+  --ui-color-primary-200: #003e58;
+  --ui-color-primary-300: #004c6b;
+  --ui-color-primary-400: #00658d;
+  --ui-color-primary-500: #0094ce;
+  --ui-color-primary-600: #00aeef;
+  --ui-color-primary-700: #4ebadf;
+  --ui-color-primary-800: #82cfff;
+  --ui-color-primary-900: #c6e7ff;
+  --ui-color-primary-950: #f0f8ff;
+}
+
+/* ============ Type defaults ============ */
+html {
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--md-background);
+  color: var(--md-on-background);
+}
+
+/* ============ Material Symbols ============ */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  vertical-align: middle;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.material-symbols-outlined.is-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ============ Typographic helpers (MD3 expressive scale) ============ */
+
+/* Display Large — hero stat figures (the dashboard balance). */
+.font-display-lg {
+  font-family: var(--font-sans);
+  font-size: 3rem;       /* 48px */
+  line-height: 3.5rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .font-display-lg { font-size: 2.25rem; line-height: 2.5rem; }
+}
+
+/* Headline Large — page titles. */
+.font-headline-lg {
+  font-family: var(--font-sans);
+  font-size: 2rem;       /* 32px */
+  line-height: 2.5rem;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .font-headline-lg { font-size: 1.75rem; line-height: 2.25rem; }
+}
+
+/* Headline Medium — section headers. */
+.font-headline-md {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;     /* 24px */
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+/* Body Large — supporting prose. */
+.font-body-lg {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+.font-body-md {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+/* Label scale — UI chrome (buttons, eyebrows, badge text). */
+.font-label-md {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.font-label-sm {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+/* Display weight helper kept as alias for legacy refs. */
+.font-display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.012em;
+}
+
+.font-mono { font-family: var(--font-mono); }
+
+/* Eyebrow / kicker — uppercase tracked label.  Often paired with a leading
+   dot or icon (see stat cards on the dashboard hero). */
+.kicker {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--md-on-surface-variant);
+}
+
+/* Tabular money — column-friendly: lining figures with fixed advance. */
+.amount {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum", "lnum";
+}
+
+/* Hairline divider used as a visual breath between sections. */
+.rule {
+  height: 1px;
+  width: 100%;
+  background:
+    linear-gradient(to right,
+      transparent 0%,
+      var(--md-outline-variant) 12%,
+      var(--md-outline-variant) 88%,
+      transparent 100%);
+}
+
+/* ============ Card surfaces ============ */
+.card-lift        { box-shadow: var(--shadow-card); }
+.card-lift-strong { box-shadow: var(--shadow-card-lifted); }
+.card-shadow      { box-shadow: var(--shadow-card); }
+
+/* Hero "primary" surface — solid teal blue, white type.  Anchors the
+   visual hierarchy.  Used on the dashboard balance card. */
+.hero-primary {
+  background: linear-gradient(135deg, var(--md-primary-container) 0%, var(--md-primary) 100%);
+  color: var(--md-on-primary);
+  border-color: transparent;
+  box-shadow: var(--shadow-card-hero);
+}
+.hero-primary .kicker        { color: rgba(255,255,255,0.78); }
+.hero-primary .amount,
+.hero-primary .hero-num      { color: var(--md-on-primary); }
+
+/* ============ Segmented control ============ */
+.seg-rail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: var(--md-surface-container);
+  border: 1px solid var(--md-outline-variant);
+  border-radius: 9999px;
+}
+.seg-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--md-on-surface-variant);
+  border-radius: 9999px;
+  transition: color 160ms var(--ease-out-soft),
+              background-color 160ms var(--ease-out-soft),
+              box-shadow 160ms var(--ease-out-soft);
+}
+.seg-tab:hover { color: var(--md-on-surface); }
+.seg-tab-active {
+  color: var(--md-primary);
+  background: var(--md-surface-container-lowest);
+  box-shadow: var(--shadow-card);
+}
+
+/* ============ Page-in animation ============ */
+@keyframes ledger-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.enter > * {
+  opacity: 0;
+  animation: ledger-in 460ms var(--ease-out-soft) forwards;
+}
+.enter > *:nth-child(1) { animation-delay: 20ms; }
+.enter > *:nth-child(2) { animation-delay: 80ms; }
+.enter > *:nth-child(3) { animation-delay: 140ms; }
+.enter > *:nth-child(4) { animation-delay: 200ms; }
+.enter > *:nth-child(5) { animation-delay: 260ms; }
+.enter > *:nth-child(6) { animation-delay: 320ms; }
+.enter > *:nth-child(n+7) { animation-delay: 380ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .enter > * { animation: none; opacity: 1; }
+}
+
+/* ============ Selection / focus / scrollbar ============ */
+::selection {
+  background: color-mix(in oklch, var(--md-primary) 22%, transparent);
+  color: var(--md-on-background);
+}
+
+:where(button, a, [role="button"], input, select, textarea):focus-visible {
+  outline: 2px solid var(--md-primary);
+  outline-offset: 2px;
+  border-radius: calc(var(--ui-radius) * 0.75);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-outline-variant) transparent;
+}
+
+/* Reusable utility: hide scrollbars on horizontal scroll rails (mobile
+   "active groups" carousel on the dashboard). */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

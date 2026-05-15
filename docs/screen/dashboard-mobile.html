@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bluebirds Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#c0c1ff",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-surface-variant": "#3e4850",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#6e7881",
+                      "surface-container-highest": "#d3e4fe",
+                      "primary-fixed": "#c6e7ff",
+                      "primary-container": "#00aeef",
+                      "on-primary-container": "#003e58",
+                      "surface-variant": "#d3e4fe",
+                      "on-secondary-container": "#fffbff",
+                      "on-background": "#0b1c30",
+                      "surface-container-high": "#dce9ff",
+                      "surface-dim": "#cbdbf5",
+                      "on-primary-fixed-variant": "#004c6b",
+                      "tertiary": "#006c49",
+                      "surface-tint": "#00658d",
+                      "surface": "#f8f9ff",
+                      "tertiary-fixed": "#6ffbbe",
+                      "inverse-primary": "#82cfff",
+                      "background": "#f8f9ff",
+                      "on-surface": "#0b1c30",
+                      "secondary-container": "#6063ee",
+                      "surface-container": "#e5eeff",
+                      "primary-fixed-dim": "#82cfff",
+                      "primary": "#00658d",
+                      "on-primary-fixed": "#001e2d",
+                      "tertiary-container": "#10b981",
+                      "on-secondary-fixed-variant": "#2f2ebe",
+                      "on-tertiary-fixed": "#002113",
+                      "on-secondary-fixed": "#07006c",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#eff4ff",
+                      "outline-variant": "#bdc8d1",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-tertiary-container": "#00422b",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "secondary": "#4648d4",
+                      "surface-bright": "#f8f9ff",
+                      "secondary-fixed": "#e1e0ff",
+                      "inverse-surface": "#213145",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed-variant": "#005236"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "container-max-width": "1200px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "32px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "label-sm": ["Plus Jakarta Sans"],
+                      "label-md": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .custom-glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .card-shadow {
+            box-shadow: 0px 4px 12px rgba(0, 174, 239, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col pb-24">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-4 h-16 w-full max-w-container-max-width mx-auto">
+<span class="font-headline-md text-headline-md font-bold text-primary">Bluebirds</span>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-on-surface-variant relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User profile" data-alt="A professional headshot of a friendly man with a warm smile, set against a soft, out-of-focus urban background. The lighting is natural and bright, conveying a sense of approachability and trust. The overall aesthetic is clean and modern, matching a light-themed financial application UI with soft blue and white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATpatFcKLKsOWAgY8OroCmAy6urN4WCKfiLqDnCz89BhJPdOnJUotbdOQwg4blwexVDIAmFLun_BGR8ZULgQi2emBY_n_jrMRxOV9kYzFOJlpJhBou-xjlKlf_47THCEUmI5yqKORveeF-3Jru4sRJqFQFigTrxHvHF2KcAO28E5KdE9PBQVCtBN92BouHrIwXnnsXXkm5QPSRBMhyprAm75719SnuFrzqFGWWwq2-F6IswpbGWi0XcmYc5Zii9FSIeaSpn03HiUWZ"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 mt-16 px-4 pt-6 space-y-8">
+<!-- Hero Balance Section -->
+<section class="space-y-4">
+<div class="bg-primary-container text-on-primary-container p-6 rounded-xl card-shadow relative overflow-hidden">
+<!-- Decorative Circle -->
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full"></div>
+<p class="font-label-md text-label-md opacity-90">Total Net Balance</p>
+<h1 class="font-display-lg text-headline-lg-mobile mt-1">$1,248.50</h1>
+<div class="mt-6 flex gap-4">
+<button class="flex-1 bg-white text-primary font-label-md py-3 rounded-lg shadow-sm active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                        Add Expense
+                    </button>
+<button class="flex-1 bg-on-primary-container text-white font-label-md py-3 rounded-lg shadow-sm active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
+                        Settle Up
+                    </button>
+</div>
+</div>
+<!-- Owe/Owed Bento Summary -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface p-4 rounded-xl border border-outline-variant/30 card-shadow">
+<div class="flex items-center gap-2 text-tertiary mb-1">
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_downward">arrow_downward</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">You are owed</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface">$2,450.00</p>
+</div>
+<div class="bg-surface p-4 rounded-xl border border-outline-variant/30 card-shadow">
+<div class="flex items-center gap-2 text-error mb-1">
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_upward">arrow_upward</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">You owe</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface">$1,201.50</p>
+</div>
+</div>
+</section>
+<!-- Active Groups Section -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h2 class="font-headline-md text-headline-md text-on-surface">Active Groups</h2>
+<button class="text-primary font-label-md">View All</button>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar -mx-4 px-4">
+<!-- Group Card 1 -->
+<div class="min-w-[280px] bg-white p-5 rounded-xl border border-outline-variant/20 card-shadow flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[28px]" data-icon="home">home</span>
+</div>
+<div class="flex -space-x-2">
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Close-up portrait of a woman with a friendly expression, featuring a clean and bright composition. The background is a soft pastel blue, perfectly matching the modern and approachable UI style of a financial social app. High-quality lighting highlights the professional yet friendly tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPAyXW7U_6eGwD29zxPEox6G2cUuCvYbuEU799uiXuEx6OIHOpQCXRtk4LEYOAXUiWkDQtuCW1SVtNxEcn4FSkp1LwJkLbxhsgyY1uCKJtFYNn4Wd2tR09lcCL3zfbgYGYeXEKb4PAKJ6PwVp4zMqULjTgZIBJ6CCBfohxSAMlc0nsnE2Aq2K3LcWMWbzjx4ck7DftO6CkmSNfP9yBWceHkwbPiKSZRrqf0iLStGEtlGIt2T0zjaxrpgo8NI-jmu14ExRWYivy0n1S"/>
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Portrait of a young man wearing glasses, looking confidently at the camera. The image uses soft studio lighting and a minimal, clean background that complements a contemporary Fintech application's aesthetic. The color palette is neutral with subtle blue undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvrkj4nPgm-sXbKGRbVZPcF5wS7DG6p95CQe9jewGAmKkH6WVHJqucwI-zhY96F5fyLnRzQhZsY9DJ8rWO54n72apQlTOtjUNjsbijYQzeXiNvVhm5XMZoCkV8MNCS7h2H4rI1_okYeADmlGE3RsqJDDndiopFsjSmCsWBD0YdeGYnEM7nfQQmeVqEl0IdXKgBwOT8mdhWZdH89BwGaD5sW6rnOKvNv6sQpTBt2-Hz-U7OVlhOTArjgGc7CgpLNZt0TpyTb5jLgvY-"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-white flex items-center justify-center text-[10px] font-bold text-on-surface-variant">+3</div>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-body-lg font-bold">Lake House Trip</h3>
+<p class="font-body-md text-label-md text-on-surface-variant">6 active bills • $420.00 pending</p>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-secondary w-3/4 h-full rounded-full"></div>
+</div>
+</div>
+<!-- Group Card 2 -->
+<div class="min-w-[280px] bg-white p-5 rounded-xl border border-outline-variant/20 card-shadow flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-tertiary-container rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[28px]" data-icon="restaurant">restaurant</span>
+</div>
+<div class="flex -space-x-2">
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Clear and bright studio portrait of a man smiling, conveying reliability and openness. The lighting is even and soft, set against a clean, light-colored backdrop that aligns with a high-end, corporate modern digital product. The image reflects a trustworthy user persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi3YtiEPTquQMmBSlhaZh7ig8_U0l0AAJ7rYytePzZ_LEkrV-k8LKuN5RjoxFRwmdps5zVS6LMuesHaIDxKkFlfJgQfpKWSpIhlLIg9CtchPoN6bL2wDU7m6cmV2dii1m5JKN_H7SrIHGl8dWq9CrliIHd9RvS-Q4CSlLSStYGhLdITDtA8vu8j9S_1M9Wgs1ZFbdNyTEZSUUVtmvByINtgHbgF-Ohyh5ZJV5yHNu7QoqsM0U9L6OhqoXhAzkEXc_apGUzcQshbVpx"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-white flex items-center justify-center text-[10px] font-bold text-on-surface-variant">+1</div>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-body-lg font-bold">Roommates</h3>
+<p class="font-body-md text-label-md text-on-surface-variant">2 active bills • $12.50 pending</p>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-secondary w-1/4 h-full rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Activity Section -->
+<section class="space-y-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">Recent Activity</h2>
+<div class="space-y-1">
+<!-- Activity Item 1 -->
+<div class="flex items-center gap-4 p-4 hover:bg-surface-container-low transition-colors rounded-xl border-b border-outline-variant/10">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-on-surface"><span class="font-bold">You</span> added "Grocery Run"</p>
+<p class="font-label-sm text-on-surface-variant">Today, 2:45 PM • Lake House Trip</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-tertiary">+$84.00</p>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex items-center gap-4 p-4 hover:bg-surface-container-low transition-colors rounded-xl border-b border-outline-variant/10">
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-on-surface"><span class="font-bold">Sarah J.</span> paid you</p>
+<p class="font-label-sm text-on-surface-variant">Yesterday, 6:12 PM</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-tertiary">+$120.00</p>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="flex items-center gap-4 p-4 hover:bg-surface-container-low transition-colors rounded-xl">
+<div class="w-10 h-10 rounded-full bg-error-container/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-on-surface"><span class="font-bold">Mike T.</span> added "Dinner Out"</p>
+<p class="font-label-sm text-on-surface-variant">Aug 14 • Roommates</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-error">-$45.20</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB for mobile context -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-[32px]" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-lg shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50">
+<div class="flex justify-around items-center h-20 px-4 w-full max-w-container-max-width mx-auto">
+<!-- Active Tab: Dashboard -->
+<a class="flex flex-col items-center gap-1 text-primary font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] uppercase tracking-tighter">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-[10px] uppercase tracking-tighter">Activity</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-[10px] uppercase tracking-tighter">Groups</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-[10px] uppercase tracking-tighter">Settlements</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] uppercase tracking-tighter">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

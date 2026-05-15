@@ -1,0 +1,286 @@
+{
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "viewAll": "View all",
+    "filter": "Filter",
+    "search": "Search",
+    "loading": "Loading…",
+    "back": "Back"
+  },
+  "landing": {
+    "title": "Split team bills without the spreadsheet",
+    "subtitle": "Record meals, drinks and coffee on your phone. See who owes whom in real time.",
+    "signIn": "Sign in with Google",
+    "openApp": "Open the app, {name}",
+    "scopeNote": "We only ask for your name, email and avatar.",
+    "authError": "Sign-in didn't go through. Please try again.",
+    "eyebrow": "A live ledger for shared money",
+    "steps": {
+      "stepLabel": "step",
+      "01": { "title": "Jot the bill",      "copy": "Add what you spent, who paid, who shares it. Two taps on a phone." },
+      "02": { "title": "See balances live", "copy": "Every bill updates who owes whom in real time. No close, no reopen." },
+      "03": { "title": "Settle, plainly",   "copy": "Record a payment when you actually transfer. The ledger reconciles itself." }
+    }
+  },
+  "nav": {
+    "brand": "BlueBirds",
+    "tagline": "Bill Splitter",
+    "dashboard": "Dashboard",
+    "activity": "Activity",
+    "groups": "Groups",
+    "settlements": "Settlements",
+    "settings": "Settings",
+    "addExpense": "Add Expense",
+    "helpCenter": "Help Center",
+    "search": "Search",
+    "notifications": "Notifications",
+    "membersActive": "{n} Members Active"
+  },
+  "dashboard": {
+    "greetingMorning": "Good Morning, {name}",
+    "greetingAfternoon": "Good Afternoon, {name}",
+    "greetingEvening": "Good Evening, {name}",
+    "subhead": "Your shared finances are looking clear today.",
+    "totalNetBalance": "Total Net Balance",
+    "youAreOwed": "You are owed",
+    "youOwe": "You owe",
+    "settleUp": "Settle Up",
+    "settleUpHint": "You have {n} balance(s) ready to settle across your groups.",
+    "payBalances": "Pay Balances",
+    "allEven": "Everyone's even — no settlements pending.",
+    "activeGroups": "Active Groups",
+    "recentActivity": "Recent Activity",
+    "noGroups": "You're not in any group yet.",
+    "noActivity": "Nothing's happened yet — add a bill to get started.",
+    "createGroup": "Create a group",
+    "owedShort": "Owed {amount}",
+    "owesShort": "You owe {amount}",
+    "settledUp": "Settled"
+  },
+  "activity": {
+    "title": "Activity",
+    "subhead": "Every bill and recorded payment, across every group you're in.",
+    "filterAll": "All",
+    "filterBills": "Bills",
+    "filterSettlements": "Settlements",
+    "empty": "No activity yet."
+  },
+  "settlementsPage": {
+    "title": "Group Settlements",
+    "eyebrow": "Financial Clarity",
+    "subhead": "Optimised payments to minimise the total number of transactions across your groups.",
+    "yourNetBalance": "Your Net Balance",
+    "suggested": "Suggested to Settle Up",
+    "pending": "{n} Pending",
+    "history": "History",
+    "progressTitle": "Settlement Progress",
+    "progressCopy": "You've cleared {pct}% of your total debts this month. Keep it up!",
+    "settled": "{amount} Settled",
+    "remaining": "{amount} Remaining",
+    "noSuggested": "Nothing to settle right now.",
+    "noHistory": "No payments recorded yet.",
+    "youPay": "You pay {name}",
+    "namePaysYou": "{name} pays you",
+    "namePays": "{from} pays {to}",
+    "paid": "Paid {name}",
+    "received": "Received from {name}"
+  },
+  "app": {
+    "greeting": "Hi {name}",
+    "createTeam": "New team",
+    "createFirstTeam": "Create your first team",
+    "noTeamsYet": "You're not in any team yet.",
+    "loading": "Loading…",
+    "allTeams": "All teams",
+    "allGroups": "All groups"
+  },
+  "groups": {
+    "title": "Groups",
+    "subhead": "Every team you're part of — pick one to dive in.",
+    "membersCount": "{n} members",
+    "billsCount": "{n} bill(s)",
+    "noBalance": "All settled"
+  },
+  "teams": {
+    "newTitle": "Create a team",
+    "create": "Create team",
+    "youAreOwner": "Owner",
+    "totalSpend": "Total Group Spend",
+    "groupBalances": "Group Balances",
+    "expenses": "Expenses",
+    "viewFullHistory": "View full history",
+    "owesYou": "owes you {amount}",
+    "youOweName": "you owe {amount}",
+    "settledUp": "settled up",
+    "settleUpAction": "Settle Up",
+    "addExpense": "Add Expense",
+    "yourTotalBalance": "Your total balance",
+    "groupOf": "Groups",
+    "tabs": {
+      "ledger": "Ledger",
+      "settle": "Settle",
+      "members": "Members",
+      "settings": "Settings"
+    },
+    "fields": {
+      "name": "Team name",
+      "currency": "Default currency",
+      "timezone": "Timezone"
+    },
+    "placeholders": {
+      "name": "e.g. Bluebirds Saigon"
+    },
+    "roles": {
+      "owner": "Owner"
+    },
+    "members": {
+      "title": "Members",
+      "promote": "Promote to owner",
+      "confirmPromote": "Promote {name} to owner? They'll be able to manage members and team settings.",
+      "confirmRemove": "Remove {name} from the team?",
+      "cannotRemoveLastOwner": "Can't remove the last owner of a team."
+    },
+    "invites": {
+      "title": "Invite link",
+      "create": "Create invite",
+      "copied": "Invite link copied",
+      "copyManual": "Couldn't copy automatically — copy this URL.",
+      "expiresAt": "expires {date}",
+      "noExpiry": "no expiry",
+      "none": "No active invites yet."
+    },
+    "settings": {
+      "title": "Settings",
+      "save": "Save changes",
+      "saved": "Saved",
+      "ownerOnly": "Only owners can change team settings.",
+      "danger": "Danger zone",
+      "deleteTeam": "Delete team",
+      "deleteWarning": "Deleting a team permanently removes all bills, settlements and history. This cannot be undone.",
+      "deleteConfirmPrompt": "Type the team name \"{name}\" to confirm deletion:",
+      "deleteMismatch": "Team name didn't match. Nothing was deleted.",
+      "deleted": "Team deleted"
+    }
+  },
+  "ledger": {
+    "title": "Ledger",
+    "totalSpent": "Total Group Spend",
+    "youPaid": "You've paid",
+    "outstanding": "Outstanding",
+    "youOwe": "You owe",
+    "owedToYou": "Owed to you",
+    "balances": "Group Balances",
+    "viewSettle": "Open settle",
+    "plan": {
+      "title": "Suggested transfers",
+      "viewAll": "See all",
+      "none": "Everyone's even. No transfers needed."
+    }
+  },
+  "bills": {
+    "title": "Expenses",
+    "add": "Add Expense",
+    "addModalTitle": "Add Expense",
+    "addSubtitle": "Divide costs with your group effortlessly.",
+    "save": "Save bill",
+    "editTitle": "Edit expense",
+    "notFound": "Bill not found.",
+    "noneTitle": "No expenses yet",
+    "none": "Add the first expense to start splitting.",
+    "allMembers": "Everyone",
+    "perPerson": "≈ {amount} per person × {n}",
+    "confirmDelete": "Delete bill \"{description}\"?",
+    "filter": "Filter",
+    "fields": {
+      "date": "Date",
+      "description": "What was this for?",
+      "note": "Note (optional)",
+      "total": "Total Amount",
+      "totalShort": "Amount ({currency})",
+      "payer": "Paid by",
+      "payerQuestion": "Who paid?",
+      "participants": "Split with",
+      "participantsPick": "Pick participants",
+      "splitMode": "How to split"
+    },
+    "split": {
+      "even": "Equally",
+      "detail": "Exact"
+    },
+    "detail": {
+      "sumLine": "{sum} of {total}",
+      "remaining": "{amount} left",
+      "over": "{amount} over",
+      "distribute": "Distribute remaining",
+      "shareForLabel": "Share for {name}",
+      "toggleOn": "Include {name}",
+      "toggleOff": "Exclude {name}"
+    },
+    "placeholders": {
+      "description": "e.g. Dinner at Bluebirds Cafe",
+      "note": "Add details…"
+    },
+    "hints": {
+      "totalParse": "Couldn't parse the amount yet."
+    },
+    "errors": {
+      "totalRequired": "Total amount is required.",
+      "descriptionRequired": "Description is required.",
+      "participantsRequired": "Pick at least one participant.",
+      "shareInvalid": "Each included member needs a valid amount.",
+      "shareTooLow": "Each share must be greater than zero.",
+      "shareSumMismatch": "Shares must add up exactly to the total."
+    }
+  },
+  "settlements": {
+    "title": "Settle",
+    "record": "Record payment",
+    "recordShort": "Record",
+    "recordOther": "Record other payment",
+    "recordTitle": "Record a payment",
+    "recordedToast": "Payment recorded.",
+    "history": "Recorded payments",
+    "none": "No payments recorded yet.",
+    "undo": "Undo payment",
+    "deletedToast": "Payment removed.",
+    "confirmDelete": "Undo this recorded payment?",
+    "fields": {
+      "from": "From",
+      "to": "To",
+      "amount": "Amount",
+      "settledOn": "Date",
+      "note": "Note (optional)"
+    },
+    "placeholders": {
+      "note": "Thanks for lunch"
+    },
+    "errors": {
+      "sameMember": "Sender and receiver must differ.",
+      "amountRequired": "Amount is required."
+    }
+  },
+  "invite": {
+    "title": "You've been invited to a team",
+    "subtitle": "Sign in or accept to join.",
+    "signInToAccept": "Sign in to accept",
+    "accept": "Accept invite"
+  },
+  "auth": {
+    "signOut": "Sign out"
+  },
+  "footer": {
+    "tagline": "BlueBirds Bill Splitter — for teams who hate spreadsheets"
+  },
+  "errors": {
+    "UNAUTHORIZED": "Please sign in to continue.",
+    "FORBIDDEN": "You don't have access to this team.",
+    "NOT_FOUND": "We couldn't find what you were looking for.",
+    "VALIDATION": "Some of the fields don't look right. Please check and try again.",
+    "INVALID_INVITE": "This invite link isn't valid anymore.",
+    "ALREADY_MEMBER": "You're already a member of this team.",
+    "CURRENCY_MISMATCH": "The bill currency doesn't match the team currency.",
+    "INTERNAL": "Something went wrong on our side. Please try again."
+  }
+}

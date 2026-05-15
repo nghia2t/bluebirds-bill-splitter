@@ -1,0 +1,286 @@
+{
+  "common": {
+    "cancel": "Huỷ",
+    "save": "Lưu",
+    "close": "Đóng",
+    "viewAll": "Xem tất cả",
+    "filter": "Lọc",
+    "search": "Tìm kiếm",
+    "loading": "Đang tải…",
+    "back": "Quay lại"
+  },
+  "landing": {
+    "title": "Chia tiền nhóm gọn gàng, không cần Excel",
+    "subtitle": "Ghi tiền ăn, cà phê, nước ngay trên điện thoại. Ai nợ ai cập nhật ngay tức thì.",
+    "signIn": "Đăng nhập bằng Google",
+    "openApp": "Vào ứng dụng, {name}",
+    "scopeNote": "Mình chỉ xin tên, email và ảnh đại diện của bạn.",
+    "authError": "Đăng nhập chưa thành công. Vui lòng thử lại.",
+    "eyebrow": "Sổ chi tiêu chung của nhóm",
+    "steps": {
+      "stepLabel": "bước",
+      "01": { "title": "Ghi hoá đơn",     "copy": "Nhập số tiền, ai trả, ai cùng góp. Hai cú chạm trên điện thoại." },
+      "02": { "title": "Xem số dư tức thì","copy": "Mỗi hoá đơn cập nhật ngay ai đang nợ ai. Không cần chốt kỳ." },
+      "03": { "title": "Ghi nhận chuyển",  "copy": "Lúc đã chuyển khoản thì ghi nhận. Sổ tự cập nhật theo." }
+    }
+  },
+  "nav": {
+    "brand": "BlueBirds",
+    "tagline": "Chia Hoá Đơn",
+    "dashboard": "Tổng quan",
+    "activity": "Hoạt động",
+    "groups": "Nhóm",
+    "settlements": "Chuyển khoản",
+    "settings": "Cài đặt",
+    "addExpense": "Thêm Bill",
+    "helpCenter": "Trợ giúp",
+    "search": "Tìm kiếm",
+    "notifications": "Thông báo",
+    "membersActive": "{n} thành viên"
+  },
+  "dashboard": {
+    "greetingMorning": "Chào buổi sáng, {name}",
+    "greetingAfternoon": "Chào buổi chiều, {name}",
+    "greetingEvening": "Chào buổi tối, {name}",
+    "subhead": "Sổ chung của bạn hôm nay rõ ràng.",
+    "totalNetBalance": "Số dư ròng",
+    "youAreOwed": "Bạn sẽ nhận",
+    "youOwe": "Bạn phải trả",
+    "settleUp": "Chuyển khoản",
+    "settleUpHint": "Bạn có {n} khoản cần thanh toán giữa các nhóm.",
+    "payBalances": "Thanh toán",
+    "allEven": "Cả nhóm đã hoà — không có gì cần chuyển.",
+    "activeGroups": "Nhóm đang hoạt động",
+    "recentActivity": "Hoạt động gần đây",
+    "noGroups": "Bạn chưa thuộc nhóm nào.",
+    "noActivity": "Chưa có hoạt động — thêm bill để bắt đầu.",
+    "createGroup": "Tạo nhóm",
+    "owedShort": "Nhận {amount}",
+    "owesShort": "Bạn nợ {amount}",
+    "settledUp": "Đã hoà"
+  },
+  "activity": {
+    "title": "Hoạt động",
+    "subhead": "Tất cả bill và giao dịch ghi nhận trên mọi nhóm bạn tham gia.",
+    "filterAll": "Tất cả",
+    "filterBills": "Bills",
+    "filterSettlements": "Chuyển khoản",
+    "empty": "Chưa có hoạt động nào."
+  },
+  "settlementsPage": {
+    "title": "Chuyển khoản",
+    "eyebrow": "Sổ Rõ Ràng",
+    "subhead": "Đề xuất các khoản chuyển tối ưu để giảm số lượng giao dịch giữa các nhóm.",
+    "yourNetBalance": "Số dư ròng",
+    "suggested": "Gợi ý chuyển khoản",
+    "pending": "{n} chờ",
+    "history": "Lịch sử",
+    "progressTitle": "Tiến độ thanh toán",
+    "progressCopy": "Bạn đã xử lý {pct}% nợ trong tháng. Cố lên!",
+    "settled": "Đã trả {amount}",
+    "remaining": "Còn {amount}",
+    "noSuggested": "Không có gì cần chuyển ngay.",
+    "noHistory": "Chưa ghi nhận khoản nào.",
+    "youPay": "Bạn trả {name}",
+    "namePaysYou": "{name} trả bạn",
+    "namePays": "{from} trả {to}",
+    "paid": "Đã trả {name}",
+    "received": "Nhận từ {name}"
+  },
+  "app": {
+    "greeting": "Chào {name}",
+    "createTeam": "Tạo nhóm",
+    "createFirstTeam": "Tạo nhóm đầu tiên",
+    "noTeamsYet": "Bạn chưa thuộc nhóm nào.",
+    "loading": "Đang tải…",
+    "allTeams": "Tất cả nhóm",
+    "allGroups": "Tất cả nhóm"
+  },
+  "groups": {
+    "title": "Nhóm",
+    "subhead": "Tất cả nhóm bạn tham gia — chọn một nhóm để xem chi tiết.",
+    "membersCount": "{n} thành viên",
+    "billsCount": "{n} hoá đơn",
+    "noBalance": "Đã hoà"
+  },
+  "teams": {
+    "newTitle": "Tạo nhóm mới",
+    "create": "Tạo nhóm",
+    "youAreOwner": "Chủ nhóm",
+    "totalSpend": "Tổng chi của nhóm",
+    "groupBalances": "Số dư nhóm",
+    "expenses": "Hoá đơn",
+    "viewFullHistory": "Xem toàn bộ",
+    "owesYou": "nợ bạn {amount}",
+    "youOweName": "bạn nợ {amount}",
+    "settledUp": "đã hoà",
+    "settleUpAction": "Chuyển khoản",
+    "addExpense": "Thêm Bill",
+    "yourTotalBalance": "Số dư của bạn",
+    "groupOf": "Nhóm",
+    "tabs": {
+      "ledger": "Sổ",
+      "settle": "Chuyển khoản",
+      "members": "Thành viên",
+      "settings": "Cài đặt"
+    },
+    "fields": {
+      "name": "Tên nhóm",
+      "currency": "Tiền tệ mặc định",
+      "timezone": "Múi giờ"
+    },
+    "placeholders": {
+      "name": "vd: Bluebirds Sài Gòn"
+    },
+    "roles": {
+      "owner": "Chủ nhóm"
+    },
+    "members": {
+      "title": "Thành viên",
+      "promote": "Phong làm chủ nhóm",
+      "confirmPromote": "Phong {name} làm chủ nhóm? Họ sẽ được quản lý thành viên và cài đặt nhóm.",
+      "confirmRemove": "Xoá {name} khỏi nhóm?",
+      "cannotRemoveLastOwner": "Không thể xoá chủ nhóm cuối cùng."
+    },
+    "invites": {
+      "title": "Liên kết mời",
+      "create": "Tạo liên kết mời",
+      "copied": "Đã copy liên kết",
+      "copyManual": "Không tự copy được — bạn copy URL này nhé.",
+      "expiresAt": "hết hạn {date}",
+      "noExpiry": "không hết hạn",
+      "none": "Chưa có liên kết nào."
+    },
+    "settings": {
+      "title": "Cài đặt",
+      "save": "Lưu thay đổi",
+      "saved": "Đã lưu",
+      "ownerOnly": "Chỉ chủ nhóm được đổi cài đặt.",
+      "danger": "Vùng nguy hiểm",
+      "deleteTeam": "Xoá nhóm",
+      "deleteWarning": "Xoá nhóm sẽ xoá vĩnh viễn tất cả hoá đơn, giao dịch và lịch sử. Không thể hoàn tác.",
+      "deleteConfirmPrompt": "Gõ tên nhóm \"{name}\" để xác nhận xoá:",
+      "deleteMismatch": "Tên nhóm không khớp. Không xoá gì cả.",
+      "deleted": "Đã xoá nhóm"
+    }
+  },
+  "ledger": {
+    "title": "Sổ",
+    "totalSpent": "Tổng chi của nhóm",
+    "youPaid": "Bạn đã chi trả",
+    "outstanding": "Còn lại",
+    "youOwe": "Bạn phải trả",
+    "owedToYou": "Bạn sẽ nhận",
+    "balances": "Số dư",
+    "viewSettle": "Mở chuyển khoản",
+    "plan": {
+      "title": "Đề xuất chuyển khoản",
+      "viewAll": "Xem hết",
+      "none": "Cả nhóm đã hoà nhau. Không cần chuyển khoản."
+    }
+  },
+  "bills": {
+    "title": "Hoá đơn",
+    "add": "Thêm Bill",
+    "addModalTitle": "Thêm Bill",
+    "addSubtitle": "Chia chi phí với nhóm chỉ trong vài bước.",
+    "save": "Lưu Bill",
+    "editTitle": "Sửa Bill",
+    "notFound": "Không tìm thấy Bill.",
+    "noneTitle": "Chưa có bill nào",
+    "none": "Hãy thêm bill đầu tiên để bắt đầu chia sẻ.",
+    "allMembers": "Cả nhóm",
+    "perPerson": "≈ {amount}/người × {n}",
+    "confirmDelete": "Xoá bill \"{description}\"?",
+    "filter": "Lọc",
+    "fields": {
+      "date": "Ngày",
+      "description": "Nội dung",
+      "note": "Ghi chú (tuỳ chọn)",
+      "total": "Tổng tiền",
+      "totalShort": "Số tiền ({currency})",
+      "payer": "Người trả",
+      "payerQuestion": "Ai trả tiền?",
+      "participants": "Chia với",
+      "participantsPick": "Chọn những người tham gia",
+      "splitMode": "Cách chia"
+    },
+    "split": {
+      "even": "Chia đều",
+      "detail": "Chia chi tiết"
+    },
+    "detail": {
+      "sumLine": "{sum} / {total}",
+      "remaining": "Còn {amount}",
+      "over": "Dư {amount}",
+      "distribute": "Chia phần còn lại",
+      "shareForLabel": "Phần của {name}",
+      "toggleOn": "Thêm {name}",
+      "toggleOff": "Bỏ {name}"
+    },
+    "placeholders": {
+      "description": "vd: Cơm trưa tại Bluebirds Cafe",
+      "note": "Thêm thông tin chi tiết…"
+    },
+    "hints": {
+      "totalParse": "Chưa hiểu giá trị này."
+    },
+    "errors": {
+      "totalRequired": "Cần nhập số tiền.",
+      "descriptionRequired": "Cần nhập nội dung.",
+      "participantsRequired": "Chọn ít nhất một người.",
+      "shareInvalid": "Mỗi người tham gia cần một số tiền hợp lệ.",
+      "shareTooLow": "Mỗi phần phải lớn hơn 0.",
+      "shareSumMismatch": "Tổng các phần phải bằng đúng tổng tiền."
+    }
+  },
+  "settlements": {
+    "title": "Chuyển khoản",
+    "record": "Ghi nhận đã trả",
+    "recordShort": "Ghi nhận",
+    "recordOther": "Ghi nhận khoản khác",
+    "recordTitle": "Ghi nhận một khoản trả",
+    "recordedToast": "Đã ghi nhận.",
+    "history": "Lịch sử đã trả",
+    "none": "Chưa ghi nhận khoản nào.",
+    "undo": "Bỏ ghi nhận",
+    "deletedToast": "Đã xoá ghi nhận.",
+    "confirmDelete": "Bỏ ghi nhận khoản này?",
+    "fields": {
+      "from": "Từ",
+      "to": "Đến",
+      "amount": "Số tiền",
+      "settledOn": "Ngày",
+      "note": "Ghi chú (không bắt buộc)"
+    },
+    "placeholders": {
+      "note": "Cảm ơn bữa trưa nha"
+    },
+    "errors": {
+      "sameMember": "Người gửi và người nhận phải khác nhau.",
+      "amountRequired": "Cần nhập số tiền."
+    }
+  },
+  "invite": {
+    "title": "Bạn được mời vào một nhóm",
+    "subtitle": "Đăng nhập hoặc xác nhận để tham gia.",
+    "signInToAccept": "Đăng nhập để tham gia",
+    "accept": "Tham gia nhóm"
+  },
+  "auth": {
+    "signOut": "Đăng xuất"
+  },
+  "footer": {
+    "tagline": "BlueBirds Bill Splitter — dành cho nhóm ghét bảng tính"
+  },
+  "errors": {
+    "UNAUTHORIZED": "Vui lòng đăng nhập để tiếp tục.",
+    "FORBIDDEN": "Bạn không có quyền truy cập nhóm này.",
+    "NOT_FOUND": "Không tìm thấy nội dung bạn cần.",
+    "VALIDATION": "Một vài trường chưa hợp lệ. Vui lòng kiểm tra lại.",
+    "INVALID_INVITE": "Liên kết mời này không còn hiệu lực.",
+    "ALREADY_MEMBER": "Bạn đã là thành viên của nhóm này.",
+    "CURRENCY_MISMATCH": "Tiền tệ của hoá đơn không khớp với nhóm.",
+    "INTERNAL": "Có lỗi xảy ra. Vui lòng thử lại sau."
+  }
+}

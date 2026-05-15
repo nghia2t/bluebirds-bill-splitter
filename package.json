@@ -1,0 +1,47 @@
+{
+  "name": "bluebirds-bill-splitter",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "@nuxt/ui": "^4.7.1",
+    "@nuxtjs/i18n": "^10.3.0",
+    "dayjs": "^1.11.20",
+    "drizzle-orm": "^0.45.2",
+    "h3": "^1.15.0",
+    "nuxt": "^4.4.5",
+    "nuxt-auth-utils": "^0.5.29",
+    "postgres": "^3.4.9",
+    "vue": "^3.5.34",
+    "vue-router": "^5.0.6",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@nuxt/test-utils": "^4.0.3",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.7.0",
+    "@vitest/coverage-v8": "^4.1.6",
+    "@vue/language-core": "^3.2.8",
+    "@vue/test-utils": "^2.4.10",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
+    "happy-dom": "^20.9.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6",
+    "vue-tsc": "^3.2.8"
+  }
+}
