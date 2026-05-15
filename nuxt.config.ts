@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   // Runtime config — populated from NUXT_* env vars in prod, .env in dev.
   // Public is shipped to the browser; non-public stays server-only.
   runtimeConfig: {
-    databaseUrl: '',                    // NUXT_DATABASE_URL
+    databaseUrl: process.env.DATABASE_URL,                    // NUXT_DATABASE_URL
     oauth: {
       google: {
         clientId: '',                   // NUXT_OAUTH_GOOGLE_CLIENT_ID
