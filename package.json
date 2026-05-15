@@ -15,7 +15,7 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
-    "vercel-build": "drizzle-kit generate && drizzle-kit migrate && nuxt build"
+    "vercel-build": "drizzle-kit migrate && nuxt build"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
