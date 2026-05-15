@@ -72,7 +72,7 @@ async function accept() {
       <div class="pt-2">
         <BButton
           v-if="!loggedIn"
-          :to="signInHref"
+          :href="signInHref"
           size="lg"
           icon="login"
         >

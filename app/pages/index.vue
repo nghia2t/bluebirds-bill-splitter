@@ -57,7 +57,7 @@ const steps = ['01', '02', '03'] as const
       </BButton>
       <BButton
         v-else
-        :to="signInHref"
+        :href="signInHref"
         size="xl"
         icon="login"
       >

@@ -99,7 +99,7 @@ const signInHref = computed(() => {
           </BButton>
           <BButton
             v-else
-            :to="signInHref"
+            :href="signInHref"
             size="sm"
             variant="filled"
             icon="login"

@@ -127,7 +127,14 @@ const activityIcon: Record<string, string> = {
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-8 enter">
     <!-- ============ Greeting ============ -->
     <header class="space-y-1">
-      <h1 class="font-headline-lg text-[var(--md-on-surface)]">{{ greeting }}</h1>
+      <ClientOnly>
+        <h1 class="font-headline-lg text-[var(--md-on-surface)]">{{ greeting }}</h1>
+        <template #fallback>
+          <h1 class="font-headline-lg text-[var(--md-on-surface)]">
+            {{ t('dashboard.greeting', { name: firstName }) }}
+          </h1>
+        </template>
+      </ClientOnly>
       <p class="font-body-md text-[var(--md-on-surface-variant)]">{{ t('dashboard.subhead') }}</p>
     </header>
 

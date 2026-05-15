@@ -18,6 +18,7 @@ type Size = 'sm' | 'md' | 'lg' | 'xl'
 
 const props = withDefaults(defineProps<{
   to?: string
+  href?: string
   type?: 'button' | 'submit' | 'reset'
   variant?: Variant
   size?: Size
@@ -86,8 +87,20 @@ const isDisabled = computed(() => props.disabled || props.loading)
 </script>
 
 <template>
+  <a
+    v-if="href && !isDisabled"
+    :href="href"
+    :class="baseClasses"
+    :aria-label="ariaLabel"
+  >
+    <MIcon v-if="loading" name="progress_activity" :size="iconSize[size]" class="animate-spin" />
+    <MIcon v-else-if="icon" :name="icon" :filled="iconFilled" :size="iconSize[size]" />
+    <span v-if="$slots.default" class="leading-none"><slot /></span>
+    <MIcon v-if="trailingIcon" :name="trailingIcon" :size="iconSize[size]" />
+  </a>
+
   <NuxtLink
-    v-if="to && !isDisabled"
+    v-else-if="to && !isDisabled"
     :to="to"
     :class="baseClasses"
     :aria-label="ariaLabel"
